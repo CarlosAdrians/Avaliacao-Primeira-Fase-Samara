@@ -1,3 +1,7 @@
+const Disciplina = require('../models/Disciplina');
+const Tarefa = require('../models/tarefa');
+
+//Explicar no video que nao tinha o exports.
 
 const criarDisciplina = async (req, res) => {
   const { nome, descricao, dataInicio, dataFim, tarefasIds } = req.body;
@@ -45,5 +49,12 @@ const editarDisciplina = async (req, res) => {
     message: "Disciplina atualizada com sucesso!",
     disciplina,
   });
+};
+
+module.exports = {
+  criarDisciplina,
+  obterTodasDisciplinas,
+  deletarDisciplina,
+  editarDisciplina,
 };
 

@@ -1,4 +1,7 @@
+const Perfil = require('../models/Perfil');
+const Aluno = require('../models/Aluno');
 
+//Explicar no video que nao tinha o exports.
 
 const criarPerfil = async (req, res) => {
   const { matricula, telefone, endereco, alunoId } = req.body;
@@ -46,3 +49,9 @@ const editarPerfil = async (req, res) => {
   });
 };
 
+module.exports = {
+  criarPerfil,
+  obterTodosPerfis,
+  deletarPerfil,
+  editarPerfil,
+};

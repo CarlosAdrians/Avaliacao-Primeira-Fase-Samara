@@ -1,3 +1,4 @@
+//Criei o server que nao tinha.
 const app = require('./app');
 const database = require('./database/db');
 
@@ -8,4 +9,4 @@ app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}/`);
 });
 
-//Lembrar de conectar isso no github amanha 
+//Conectei no github e no banco de dados.

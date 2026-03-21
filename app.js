@@ -1,12 +1,13 @@
+//Criei o app que nao tinha
 const express = require ('express');
 const app = express();
 
-const alunoRoutes = require('./routes/alunosRoutes');
-const disciplinaRoutes = require('./routes/disciplinasRoutes');
+const alunoRoutes = require('./routes/alunoRoutes');
+const disciplinaRoutes = require('./routes/disciplinaRoutes');
 const perfilRoutes = require('./routes/perfilRoutes');
-const professorRoutes = require('./routes/professoresRoutes');
-const tarefaRoutes = require('./routes/tarefasRoutes');
-const turmaRoutes = require('./routes/turmasRoutes');
+const professorRoutes = require('./routes/professorRoutes');
+const tarefaRoutes = require('./routes/tarefaRoutes');
+const turmaRoutes = require('./routes/turmaRoutes');
 
 app.use(express.json());
 

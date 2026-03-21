@@ -1,3 +1,6 @@
+const Tarefa = require('../models/tarefa');
+
+//Explicar no video que nao tinha o exports.
 
 const criarTarefa = async (req, res) => {
   const { titulo, alunoId, disciplinasIds } = req.body;
@@ -40,4 +43,12 @@ const editarTarefa = async (req, res) => {
     tarefa,
   });
 };
+
+module.exports = {
+  criarTarefa,
+  obterTodasTarefas,
+  deletarTarefa,
+  editarTarefa,
+};
+
 

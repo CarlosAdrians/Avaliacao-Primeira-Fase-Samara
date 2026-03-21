@@ -1,3 +1,6 @@
+const Professor = require('../models/Professor');
+
+//Explicar no video que nao tinha o exports.
 
 const criarProfessor = async (req, res) => {
   const { nome, idade, disciplinasIds } = req.body;
@@ -39,3 +42,9 @@ const editarProfessor = async (req, res) => {
   });
 };
 
+module.exports = {
+  criarProfessor,
+  obterTodosProfessores,
+  deletarProfessor,
+  editarProfessor,
+};
