@@ -2,51 +2,21 @@ const Tarefa = require('../models/tarefa');
 
 //Explicar no video que nao tinha o exports.
 
-const criarTarefa = async (req, res) => {
-  const { titulo, alunoId, disciplinasIds } = req.body;
-  const concluida = false;
+const criarTarefa = async (req, res) => {};
 
-  const novaTarefa = new Tarefa({
-    titulo,
-    aluno: alunoId,
-    concluida,
-    disciplinas: disciplinasIds,
-  });
+const obterTodasTarefas = async (req, res) => {};
 
-  await novaTarefa.save();
+const obterTarefaPorCodigo = async (req, res) => {};
 
-  res.json({
-    message: "Tarefa criada com sucesso!",
-    tarefa: novaTarefa,
-  });
-};
+const deletarTarefa = async (req, res) => {};
 
-const obterTodasTarefas = async (req, res) => {
-  const tarefas = await Tarefa.find().populate("aluno").populate("disciplinas");
-  res.json(tarefas);
-};
+const editarTarefa = async (req, res) => {};
 
-const deletarTarefa = async (req, res) => {
-  const { id } = req.params;
-
-  await Tarefa.deleteOne({ _id: id });
-  res.json({ message: "Tarefa removida com sucesso!" });
-};
-
-const editarTarefa = async (req, res) => {
-  const { id } = req.params;
-  const { titulo, concluida } = req.body;
-
-  let tarefa = await Tarefa.findByIdAndUpdate(id, { titulo, concluida });
-  res.status(200).json({
-    message: "Tarefa atualizada com sucesso!",
-    tarefa,
-  });
-};
 
 module.exports = {
   criarTarefa,
   obterTodasTarefas,
+  obterTarefaPorCodigo,
   deletarTarefa,
   editarTarefa,
 };

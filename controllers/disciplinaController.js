@@ -3,57 +3,20 @@ const Tarefa = require('../models/tarefa');
 
 //Explicar no video que nao tinha o exports.
 
-const criarDisciplina = async (req, res) => {
-  const { nome, descricao, dataInicio, dataFim, tarefasIds } = req.body;
+const criarDisciplina = async (req, res) => {};
 
-  const novaDisciplina = new Disciplina({
-    nome,
-    descricao,
-    dataInicio,
-    dataFim,
-    tarefas: tarefasIds,
-  });
+const obterTodasDisciplinas = async (req, res) => {};
 
-  await novaDisciplina.save();
+const obterDisciplinaPorCodigo = async (req, res) => {};
 
-  // Atualiza as tarefas associadas à disciplina
-  await Tarefa.updateMany(
-    { _id: { $in: tarefasIds } },
-    { $push: { disciplinas: novaDisciplina._id } }
-  );
+const deletarDisciplina = async (req, res) => {};
 
-  res.json({
-    message: "Disciplina criada com sucesso!",
-    disciplina: novaDisciplina,
-  });
-};
-
-const obterTodasDisciplinas = async (req, res) => {
-  const disciplinas = await Disciplina.find().populate('tarefas');
-  res.json(disciplinas);
-};
-
-const deletarDisciplina = async (req, res) => {
-  const { id } = req.params;
-
-  await Disciplina.deleteOne({ _id: id });
-  res.json({ message: "Disciplina removida com sucesso!" });
-};
-
-const editarDisciplina = async (req, res) => {
-  const { id } = req.params;
-  const { nome, descricao, dataInicio, dataFim, tarefasIds } = req.body;
-
-  let disciplina = await Disciplina.findByIdAndUpdate(id, { nome, descricao, dataInicio, dataFim, tarefas: tarefasIds });
-  res.status(200).json({
-    message: "Disciplina atualizada com sucesso!",
-    disciplina,
-  });
-};
+const editarDisciplina = async (req, res) => {};
 
 module.exports = {
   criarDisciplina,
   obterTodasDisciplinas,
+  obterDisciplinaPorCodigo,
   deletarDisciplina,
   editarDisciplina,
 };

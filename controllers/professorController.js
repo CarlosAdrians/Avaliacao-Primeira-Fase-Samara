@@ -1,50 +1,22 @@
 const Professor = require('../models/Professor');
 
 //Explicar no video que nao tinha o exports.
+//Adicionando obter professor por registro.
 
-const criarProfessor = async (req, res) => {
-  const { nome, idade, disciplinasIds } = req.body;
+const criarProfessor = async (req, res) => {};
 
-  const novoProfessor = new Professor({
-    nome,
-    idade,
-    disciplinas: disciplinasIds
-  });
+const obterTodosProfessores = async (req, res) => {};
 
-  await novoProfessor.save();
+const obterProfessorPorRegistro = async (req, res) => {};
 
-  res.json({
-    message: "Professor criado com sucesso!",
-    professor: novoProfessor,
-  });
-};
+const deletarProfessor = async (req, res) => {};
 
-const obterTodosProfessores = async (req, res) => {
-  const professores = await Professor.find().populate('disciplinas');
-  res.json(professores);
-};
-
-const deletarProfessor = async (req, res) => {
-  const { id } = req.params;
-
-  await Professor.deleteOne({ _id: id });
-  res.json({ message: "Professor removido com sucesso!" });
-};
-
-const editarProfessor = async (req, res) => {
-  const { id } = req.params;
-  const { nome, idade, disciplinasIds } = req.body;
-
-  let professor = await Professor.findByIdAndUpdate(id, { nome, idade, disciplinas: disciplinasIds });
-  res.status(200).json({
-    message: "Professor atualizado com sucesso!",
-    professor,
-  });
-};
+const editarProfessor = async (req, res) => {};
 
 module.exports = {
   criarProfessor,
   obterTodosProfessores,
+  obterProfessorPorRegistro,
   deletarProfessor,
   editarProfessor,
 };

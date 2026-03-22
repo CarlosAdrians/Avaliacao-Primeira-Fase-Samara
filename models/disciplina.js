@@ -1,7 +1,15 @@
 let mongoose = require("mongoose");
-const Tarefa = require("./tarefa.js");
+
+//codigo como id.
 
 let disciplinaSchema = new mongoose.Schema({
+  codigo: { 
+    type: String, 
+    required: true, 
+    unique: true,
+    uppercase: true,
+    trim: true
+  },
   nome: { type: String, required: true },
   descricao: { type: String },
   dataInicio: { type: Date, default: Date.now },

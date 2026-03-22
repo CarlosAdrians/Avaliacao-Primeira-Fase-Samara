@@ -1,7 +1,7 @@
 const Aluno = require('../models/Aluno');
 
 //Explicar no video que nao tinha o exports.
-//TODO: Testar
+//Funcionando
 
 const criarAluno = async (req, res) => {
   try{
