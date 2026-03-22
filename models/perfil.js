@@ -20,6 +20,7 @@ let perfilSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
+  // Relacionamento com o modelo Aluno 1:1 para o video
   aluno: { 
     type: mongoose.Schema.Types.ObjectId, 
     ref: "Aluno",

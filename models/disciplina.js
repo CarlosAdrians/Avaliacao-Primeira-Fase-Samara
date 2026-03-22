@@ -15,6 +15,7 @@ let disciplinaSchema = new mongoose.Schema({
   dataInicio: { type: Date, default: Date.now },
   dataFim: { type: Date },
   tarefas: [{ type: mongoose.Schema.Types.ObjectId, ref: "Tarefa" }],
+  // Relacionamento com o modelo professor N:N para o video
   professores: [{ type: mongoose.Schema.Types.ObjectId, ref: "Professor" }]
 });
 

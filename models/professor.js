@@ -1,6 +1,5 @@
 let mongoose = require("mongoose");
 
-//Relacionamento com professor e turma.
 
 let professorSchema = new mongoose.Schema({
   registro: { 
@@ -12,6 +11,8 @@ let professorSchema = new mongoose.Schema({
   },
   nome: { type: String, required: true },
   idade: { type: Number, required: true },
+  
+  // Relacionamento com o modelo disciplina N:N para o video
   disciplinas: [{ type: mongoose.Schema.Types.ObjectId, ref: "Disciplina" }],
   turmas: [{ type: mongoose.Schema.Types.ObjectId, ref: "Turma" }]
 });

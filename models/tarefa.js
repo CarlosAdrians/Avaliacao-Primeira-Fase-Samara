@@ -12,6 +12,7 @@ let tarefaSchema = new mongoose.Schema({
   },
   titulo: { type: String, required: true },
   concluida: { type: Boolean, default: false },
+  // Relacionamento com o modelo Aluno 1:N para o video
   aluno: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Aluno",
