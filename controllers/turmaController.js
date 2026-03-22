@@ -2,6 +2,8 @@ const Turma = require('../models/Turma');
 const Aluno = require('../models/Aluno');
 const Professor = require('../models/Professor');
 
+//Funcionando
+
 const criarTurma = async (req, res) => {
   try {
     const { codigoTurma, nome, professor, alunos } = req.body;

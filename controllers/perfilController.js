@@ -1,6 +1,8 @@
 const Perfil = require('../models/Perfil');
 const Aluno = require('../models/Aluno');
 
+//Funcionando
+
 const criarPerfil = async (req, res) => {
   try {
     const { matricula, telefone, endereco, alunoMatricula } = req.body;

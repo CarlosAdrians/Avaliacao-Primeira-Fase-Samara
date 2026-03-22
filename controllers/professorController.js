@@ -2,6 +2,8 @@ const Professor = require('../models/Professor');
 const Disciplina = require('../models/Disciplina');
 const Turma = require('../models/Turma');
 
+//Funcionando
+
 const criarProfessor = async (req, res) => {
   try {
     const { registro, nome, idade, disciplinas, turmas } = req.body;

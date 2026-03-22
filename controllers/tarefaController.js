@@ -2,6 +2,8 @@ const Tarefa = require('../models/tarefa');
 const Aluno = require('../models/Aluno');
 const Disciplina = require('../models/Disciplina');
 
+//Funcionando
+
 const criarTarefa = async (req, res) => {
   try {
     const { codigoTarefa, titulo, aluno, disciplinas } = req.body;

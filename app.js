@@ -8,6 +8,7 @@ const perfilRoutes = require('./routes/perfilRoutes');
 const professorRoutes = require('./routes/professorRoutes');
 const tarefaRoutes = require('./routes/tarefaRoutes');
 const turmaRoutes = require('./routes/turmaRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 app.use(express.json());
 
@@ -17,6 +18,7 @@ app.use('/api', perfilRoutes);
 app.use('/api', professorRoutes);
 app.use('/api', tarefaRoutes);
 app.use('/api', turmaRoutes);
+app.use('/api', authRoutes);
 
 app.get('/', (req, res) => {
     res.json({ message: 'Funcionando!' });
