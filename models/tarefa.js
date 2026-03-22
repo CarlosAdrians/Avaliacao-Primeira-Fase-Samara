@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
-// Apaguei tudo para ajeitar a const aluno
-//codigoTarefa como id.
+
+//Relacionamento com aluno e disciplina.
 
 let tarefaSchema = new mongoose.Schema({
   codigoTarefa: { 
@@ -15,6 +15,7 @@ let tarefaSchema = new mongoose.Schema({
   aluno: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Aluno",
+    required: true
   },
   disciplinas: [{ type: mongoose.Schema.Types.ObjectId, ref: "Disciplina" }],
 });

@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 
-//Atributos necessarios ja tinha mas faltou required.
+//Relacionamento com aluno
 
 let perfilSchema = new mongoose.Schema({
   matricula: { 

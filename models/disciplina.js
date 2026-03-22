@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 
-//codigo como id.
+//Relacionamento com professor e turma.
 
 let disciplinaSchema = new mongoose.Schema({
   codigo: { 
@@ -15,6 +15,7 @@ let disciplinaSchema = new mongoose.Schema({
   dataInicio: { type: Date, default: Date.now },
   dataFim: { type: Date },
   tarefas: [{ type: mongoose.Schema.Types.ObjectId, ref: "Tarefa" }],
+  professores: [{ type: mongoose.Schema.Types.ObjectId, ref: "Professor" }]
 });
 
 module.exports = mongoose.model("Disciplina", disciplinaSchema);

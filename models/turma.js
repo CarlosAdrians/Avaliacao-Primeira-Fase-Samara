@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 
-//codigoTurma como id.
+//Relacionamento com alunos e professor.
 
 let turmaSchema = new mongoose.Schema({
   codigoTurma: { 
