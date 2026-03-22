@@ -1,4 +1,4 @@
-const Professor = require('../models/Professor');
+const Professor = require('../models/professor');
 const Disciplina = require('../models/Disciplina');
 const Turma = require('../models/Turma');
 

@@ -1,7 +1,7 @@
 const Aluno = require('../models/Aluno');
 const Turma = require('../models/Turma');
 const Tarefa = require('../models/tarefa');
-//Funcionando
+
 
 const criarAluno = async (req, res) => {
   try{

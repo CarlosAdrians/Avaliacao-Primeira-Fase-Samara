@@ -1,4 +1,4 @@
-const Perfil = require('../models/Perfil');
+const Perfil = require('../models/perfil');
 const Aluno = require('../models/Aluno');
 
 //Funcionando

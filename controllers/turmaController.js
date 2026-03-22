@@ -1,6 +1,6 @@
 const Turma = require('../models/Turma');
 const Aluno = require('../models/Aluno');
-const Professor = require('../models/Professor');
+const Professor = require('../models/professor');
 
 //Funcionando
 
