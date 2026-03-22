@@ -95,7 +95,7 @@ Identificar e descrever os relacionamentos existentes:
 
 ---
 
-## 👥 Integrante
+## 👥 Autor
 
 * Carlos Adrians Araújo Damacena
 

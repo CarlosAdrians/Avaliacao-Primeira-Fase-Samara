@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 
-//Ja conectei no localhost e criei banco de dados, testar quando rodar a aplicação.
+//Funcionando.
 
 const server = 'localhost:27017'; // COLOQUE O NOME DO SEU SERVIDOR DO BANCO DE DADOS
 const database = 'avaliacao1';      // COLOQUE O NOME DO SEU BANCO DE DADOS
